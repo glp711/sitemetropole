@@ -4,9 +4,9 @@ import { useMobileMenu } from "@/contexts/MobileMenuContext";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import metropoleFacade1 from "@/assets/metropole-facade-1.jpg";
-import metropoleInterior from "@/assets/metropole-interior.jpg";
-import metropoleExterior from "@/assets/metropole-exterior.jpg";
+import metropoleFacade1 from "@/assets/metropole-facade-1.webp";
+import metropoleInterior from "@/assets/metropole-interior.webp";
+import metropoleExterior from "@/assets/metropole-exterior.webp";
 const Hero = () => {
   const { toggleMenu } = useMobileMenu();
   
