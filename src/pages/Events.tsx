@@ -43,7 +43,7 @@ const EventsSection = () => {
     location: "Praça de Alimentação - Metrópole Shopping",
     description: "O Metrópole Shopping preparou uma tarde especial para a criançada aproveitar as férias com muita diversão, aprendizado e descobertas!",
     fullDescription: "O Pequenos Exploradores – Férias no Metrópole é um evento gratuito pensado para crianças de 4 a 12 anos, com recreação animada, brincadeiras dirigidas, gincanas, músicas e uma oficina criativa de plantinhas, estimulando o contato com a natureza e a imaginação.",
-    image: "/lovable-uploads/1768258398504_image.png",
+    image: "/lovable-uploads/1768258398504_image.webp",
     highlight: "Entrada Gratuita",
     highlightBadge: "Vagas Limitadas",
     activities: [
