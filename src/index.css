@@ -1,0 +1,364 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎨 Metrópole Shopping Design System - Identidade Visual Oficial
+All colors MUST be HSL.
+Cor Principal: Verde Metrópole #5B8A72
+*/
+
+@layer base {
+  :root {
+    /* Background Colors */
+    --background: 210 20% 98%; /* #F9FAFB - Cinza muito claro */
+    --foreground: 222 47% 11%; /* #111827 - Texto primário (preto quase puro) */
+
+    --card: 0 0% 100%; /* #FFFFFF - Branco */
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* 🎯 Verde Metrópole - Cor Principal (#5B8A72) */
+    --primary: 149 21% 45%; /* Verde Metrópole principal */
+    --primary-foreground: 0 0% 100%; /* Branco */
+    --primary-light: 149 18% 55%;
+    --primary-dark: 149 25% 35%;
+    --primary-subtle: 149 30% 96%;
+
+    /* 🌟 Dourado - Secondary (#D4AF37) - Pontos/Prêmios */
+    --secondary: 46 65% 52%; /* Dourado principal */
+    --secondary-foreground: 222 47% 11%;
+    --secondary-light: 46 70% 62%;
+    --secondary-dark: 46 60% 42%;
+    --secondary-subtle: 46 50% 95%; /* #FFF9E6 - Dourado claro */
+
+    --muted: 220 13% 91%; /* #F3F4F6 - Cinza muito claro */
+    --muted-foreground: 215 16% 47%; /* #6B7280 - Cinza médio */
+
+    --accent: 149 25% 95%;
+    --accent-foreground: 149 21% 45%;
+
+    /* Dourado como Luxury (mantém compatibilidade) */
+    --luxury: 46 65% 52%; /* Dourado */
+    --luxury-foreground: 222 47% 11%;
+    --luxury-light: 46 70% 62%;
+    --luxury-subtle: 46 50% 95%;
+
+    /* Neutrals */
+    --neutral: 215 16% 47%; /* #6B7280 - Cinza médio */
+    --neutral-light: 220 13% 91%; /* #F3F4F6 */
+    --neutral-dark: 222 47% 11%; /* #111827 */
+
+    /* Status Colors */
+    --destructive: 0 84% 60%; /* #EF4444 - Vermelho erro */
+    --destructive-foreground: 0 0% 98%;
+    
+    --success: 142 71% 45%; /* #10B981 - Verde sucesso */
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%; /* #F59E0B - Laranja alerta */
+    --warning-foreground: 222 47% 11%;
+    
+    --info: 217 91% 60%; /* #3B82F6 - Azul informação */
+    --info-foreground: 0 0% 100%;
+
+    /* Text Colors */
+    --text-primary: 222 47% 11%; /* #111827 */
+    --text-secondary: 215 16% 47%; /* #6B7280 */
+    --text-tertiary: 215 11% 65%; /* #9CA3AF */
+    --text-white: 0 0% 100%; /* #FFFFFF */
+
+    /* Background Variants */
+    --background-light: 220 13% 91%; /* #F3F4F6 */
+    --background-card: 0 0% 100%; /* #FFFFFF */
+    --background-green: 149 35% 85%; /* #D1E7DD - Verde claro */
+    --background-blue: 214 95% 93%; /* #BFDBFE - Azul claro */
+    --background-gold: 46 50% 95%; /* #FFF9E6 - Dourado claro */
+
+    --border: 220 13% 88%; /* Border mais sutil */
+    --input: 220 13% 88%;
+    --ring: 149 21% 45%; /* Verde Metrópole */
+
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)), hsl(var(--secondary-light) / 0.2));
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--secondary) / 0.1), hsl(var(--secondary-subtle)));
+    --gradient-sophisticated: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary-subtle)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--accent)));
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary) / 0.2), transparent 70%);
+
+    /* Shadows & Effects (conforme design system) */
+    --shadow-small: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    --shadow-large: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+    --shadow-elegant: 0 20px 60px -10px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(var(--muted-foreground) / 0.08);
+    --shadow-soft: 0 4px 20px -5px hsl(var(--muted-foreground) / 0.05);
+    --shadow-hover: 0 15px 50px -10px hsl(var(--primary) / 0.25);
+    --glow-primary: 0 0 40px hsl(var(--primary) / 0.4);
+    --glow-secondary: 0 0 30px hsl(var(--secondary) / 0.3);
+
+    /* Refined Animations */
+    --transition-elegant: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Spacing System (conforme design system) */
+    --space-xs: 0.25rem; /* 4px */
+    --space-sm: 0.5rem; /* 8px */
+    --space-md: 0.75rem; /* 12px */
+    --space-lg: 1rem; /* 16px */
+    --space-xl: 1.25rem; /* 20px */
+    --space-2xl: 1.5rem; /* 24px */
+    --space-3xl: 2rem; /* 32px */
+
+    /* Border Radius System (conforme design system) */
+    --radius-sm: 0.5rem; /* 8px - Badges */
+    --radius-md: 0.75rem; /* 12px - Botões */
+    --radius-lg: 1rem; /* 16px - Cards */
+    --radius-xl: 1.25rem; /* 20px - Cards grandes */
+    --radius-2xl: 9999px; /* Full - Circular */
+  }
+
+  .dark {
+    --background: 149 25% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 149 20% 18%;
+    --card-foreground: 0 0% 98%;
+
+    --primary: 149 21% 50%;
+    --primary-light: 149 18% 60%;
+    --primary-dark: 149 25% 35%;
+
+    --secondary: 46 65% 55%;
+    --secondary-light: 46 70% 65%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.3);
+  }
+}
+
+/* Premium Component System */
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent;
+  }
+
+  .hero-section {
+    background: var(--gradient-hero);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Enhanced Card Components */
+  .modern-card {
+    @apply bg-card border border-border rounded-2xl p-6;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-elegant);
+  }
+
+  .modern-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .premium-card {
+    @apply bg-gradient-to-br from-card to-accent/30 border border-primary/10 rounded-3xl p-8;
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(10px);
+    transition: var(--transition-elegant);
+  }
+
+  .premium-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-hover), var(--glow-primary);
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+  }
+
+  .glass-card:hover {
+    @apply bg-white/15 border-white/30;
+    transform: translateY(-2px);
+  }
+
+  /* Enhanced Button System */
+  .modern-button {
+    @apply relative overflow-hidden rounded-xl px-6 py-3 font-medium;
+    transition: var(--transition-elegant);
+  }
+
+  .modern-button::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary to-primary-light opacity-0;
+    transition: var(--transition-smooth);
+  }
+
+  .modern-button:hover::before {
+    @apply opacity-100;
+  }
+
+  .cta-button {
+    @apply relative bg-gradient-to-r from-primary to-primary-light text-primary-foreground font-semibold rounded-full px-8 py-4 shadow-lg;
+    transition: var(--transition-bounce);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: var(--shadow-hover), var(--glow-primary);
+  }
+
+  .luxury-button {
+    @apply bg-gradient-to-r from-secondary to-secondary-light text-foreground font-semibold rounded-full px-6 py-3;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-elegant);
+  }
+
+  .luxury-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-secondary);
+  }
+
+  /* Typography System */
+  .heading-xl {
+    @apply font-heading text-5xl md:text-6xl font-bold leading-tight tracking-tight;
+  }
+
+  .heading-lg {
+    @apply font-heading text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+  }
+
+  .heading-md {
+    @apply font-heading text-3xl md:text-4xl font-semibold leading-tight tracking-tight;
+  }
+
+  .heading-sm {
+    @apply font-heading text-2xl md:text-3xl font-semibold leading-snug tracking-tight;
+  }
+
+  .text-elegant {
+    @apply font-body text-lg leading-relaxed text-muted-foreground;
+  }
+
+  .text-sophisticated {
+    @apply font-display font-light text-base leading-relaxed tracking-wide;
+  }
+
+  .text-premium {
+    @apply font-display font-medium text-lg leading-relaxed text-foreground;
+  }
+
+  /* Layout Utilities */
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+
+  .container-modern {
+    @apply container mx-auto px-4 lg:px-8;
+  }
+
+  .grid-modern {
+    @apply grid gap-8 md:gap-12;
+  }
+
+  .flex-modern {
+    @apply flex items-center gap-6;
+  }
+
+  /* Visual Effects */
+  .glow-effect {
+    position: relative;
+  }
+
+  .glow-effect::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: var(--gradient-glow);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition-smooth);
+  }
+
+  .glow-effect:hover::before {
+    opacity: 1;
+  }
+
+  .section-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent my-16;
+  }
+
+  .content-fade {
+    @apply animate-fade-in;
+  }
+
+  /* Responsive Enhancements */
+  .mobile-optimized {
+    @apply text-sm md:text-base;
+  }
+
+  .touch-friendly {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Mobile Menu Improvements */
+  .mobile-sheet-open body {
+    overflow: visible !important;
+  }
+
+  /* Image Responsive Fixes */
+  .responsive-img {
+    @apply w-full h-auto object-cover;
+    aspect-ratio: attr(aspect-ratio, auto);
+  }
+
+  .responsive-img.landscape {
+    aspect-ratio: 4/3;
+  }
+
+  .responsive-img.portrait {
+    aspect-ratio: 3/4;
+  }
+
+  .responsive-img.square {
+    aspect-ratio: 1/1;
+  }
+
+  .responsive-img.video {
+    aspect-ratio: 16/9;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Prevent body scroll lock when mobile menu is open */
+  body.sheet-open {
+    overflow: auto !important;
+    position: static !important;
+  }
+}
+
+/* Hide Lovable Badge */
+a[href="lovable.dev"], 
+iframe[src="lovable.dev"],
+div[style*="Edit with Lovable"],
+.lovable-badge {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+}
