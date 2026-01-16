@@ -371,7 +371,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       logo: "/lovable-uploads/fb714381-9285-4602-bc8a-818b0bb6fe63.webp",
       storeImage: "/lovable-uploads/23257745-7eaa-4ae1-b602-b51cde6fb167.webp",
       instagramUrl: "https://www.instagram.com/clinicaequilibriummulti_/",
-      location: "Térreo e Piso Superior - Metrópole Shopping",
+      location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 98153-6028",
       hours: "Seg-Qui: 07h - 21h30 | Sex: 07h - 20h40",
       category: "Clínicas",
@@ -461,7 +461,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       storeImage: "/lovable-uploads/fortnutri.webp",
       instagramUrl: "https://www.instagram.com/fort.nutri/",
       whatsappUrl: "https://api.whatsapp.com/send/?phone=5561992848393",
-      location: "Subsolo - Metrópole Shopping (em frente à World Gym)",
+      location: "Subsolo - Metrópole Shopping (Em frente à World Gym)",
       phone: "(61) 99284-8393",
       hours: "Todos os dias",
       category: "Saúde",
@@ -703,7 +703,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       logo: "/lovable-uploads/363c1b79-b5de-4fc5-b057-00e0d6185a7d.webp",
       storeImage: "/lovable-uploads/483690e1-396b-4ab6-a854-592b806b569c.webp",
       instagramUrl: "https://www.instagram.com/sportinline",
-      location: "Piso Superior - Metrópole Shopping",
+      location: "Piso Superior - Metrópole Shopping (Ao Lado da administração)",
       phone: "(61) 3578-3038",
       hours: "Seg-Sáb: 10h - 19h",
       category: "Esportes",
@@ -732,18 +732,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       category: "Outros",
       subcategory: "Recreação Infantil"
     },
-    {
-      id: 52,
-      name: "Amani Paper",
-      logo: "/lovable-uploads/e1227d8c-7d2a-4173-b89e-d5a91b3e42dc.webp",
-      storeImage: "/lovable-uploads/3b50149b-2cdf-4aae-b6b9-8bc9569be0c4.webp",
-      location: "Térreo - Metrópole Shopping",
-      hours: "Seg a Sex: 10h às 18h | Sáb: 10h às 16h",
-      phone: "",
-      instagramUrl: "https://www.instagram.com/amanipaper/",
-      category: "Outros",
-      subcategory: "Papelaria"
-    },
+  
     {
       id: 53,
       name: "Allen Joias",
