@@ -179,7 +179,7 @@ const Footer = () => {
             <div className="flex justify-center">
               <Badge variant="outline" className="border-luxury/50 text-luxury bg-luxury/10 px-6 py-3 text-base font-semibold">
                 <Building2 className="h-5 w-5 mr-3" />
-                Funcionando desde 2020 em Águas Claras
+                Funcionando desde 2011 em Águas Claras
               </Badge>
             </div>
           </div>
