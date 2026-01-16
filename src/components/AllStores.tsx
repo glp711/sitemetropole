@@ -122,7 +122,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/duoeco_boutique/",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 8283-0101",
-      hours: "Segunda a Sábado: 09h às 21h | Domingo: 11h às 18h",
+      hours: "Segunda a Sábado: 10h às 18h | Domingo: 10h às 16h",
       category: "Moda",
       subcategory: "Moda Feminina"
     },
@@ -159,12 +159,24 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       whatsappUrl: "https://api.whatsapp.com/send/?phone=556196899972",
       location: "Térreo - Metrópole Shopping",
       phone: "(61) 96899-972",
-      hours: "Segunda a Sábado: 10h às 22h",
+      hours: "Segunda a Sábado: 10h às 19h",
       category: "Moda",
       subcategory: "Moda Infantil",
       type: "quiosque"
     },
-    
+    {
+      id: 71,
+      name: "Closet Versi.me",
+      logo: "/lovable-uploads/logoversime.webp",
+      storeImage: "/lovable-uploads/versime.webp",
+      instagramUrl: "https://www.instagram.com/closetversime/",
+      location: "Piso Superior - Metrópole Shopping",
+      phone: "(61) 99925-1735",
+      hours: "Segunda a sexta: 10h às 19h | Sábado: 10h às 18h",
+      category: "Moda",
+      subcategory: "Moda Feminina",
+    },
+
     
     // Beauty Stores
     {
@@ -175,7 +187,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/estudioanaaquino",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 9629-5989",
-      hours: "Seg-Sáb: 10h - 20h",
+      hours: "Segunda a Sábado: 10h às 19h",
       category: "Beleza",
       subcategory: "Estúdio de Sobrancelhas"
     },
@@ -187,7 +199,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/anasceilandia/",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 9409-7878",
-      hours: "Seg-Sáb: 10h - 19h",
+      hours: "Segunda a Sábado: 10h às 19h",
       category: "Beleza",
       subcategory: "Sobrancelhas"
     },
@@ -300,7 +312,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/instituto.iluma",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 8333-6060",
-      hours: "Seg-Sex: 08h - 18h | Sáb: 08h - 12h | Mediante agendamento",
+      hours: "Segunda a Sexta: 08h às 18h | Sábado: 08h às 12h | Mediante agendamento",
       category: "Clínicas",
       subcategory: "Odontologia e Estética"
     },
@@ -312,7 +324,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/dupepodologiaespecializada",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 8110-7315",
-      hours: "Seg-Sáb: 10h - 20h",
+      hours: "Segunda a Sábado: 10h às 20h",
       category: "Saúde",
       subcategory: "Podologia"
     },
@@ -323,8 +335,8 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       storeImage: "/lovable-uploads/812fd18e-598e-4e1b-babc-c22135805d8f.webp",
       instagramUrl: "https://www.instagram.com/oticasolaris.bsb/",
       location: "Piso Superior - Metrópole Shopping",
-      phone: null,
-      hours: "Segunda a Sábado: 10h - 20h",
+      phone: "(61) 99672-3384",
+      hours: "Segunda a Sábado: 10h às 20h",
       category: "Saúde",
       subcategory: "Ótica",
       website: "https://oticasolarisbsb.com.br/"
@@ -337,7 +349,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/oticabrizzon/",
       location: "Térreo - Metrópole Shopping",
       phone: "(61) 9 9279-2318",
-      hours: "Segunda a Sábado: 10h às 20h",
+      hours: "Segunda a Sábado: 10h às 18h",
       category: "Saúde",
       subcategory: "Ótica"
     },
@@ -349,7 +361,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/sabinbr_/",
       location: "Térreo - Metrópole Shopping",
       phone: "(61) 3329-8000",
-      hours: "Seg-Sex: 06h - 17h | Sáb: 06h30 - 12h",
+      hours: "Segunda a Sexta: 06h às 17h | Sábado: 06h30 às 12h",
       category: "Clínicas",
       subcategory: "Exames e Laboratório"
     },
@@ -361,7 +373,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/daluziasilveirapsicopedagogia/",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9627-3387",
-      hours: "Seg-Sex: 08h - 20h",
+      hours: "Segunda a Sexta: 08h às 20h",
       category: "Clínicas",
       subcategory: "Psicopedagogia"
     },
@@ -373,7 +385,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/clinicaequilibriummulti_/",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 98153-6028",
-      hours: "Seg-Qui: 07h - 21h30 | Sex: 07h - 20h40",
+      hours: "Segunda a Quinta: 07h às 21h30 | Sexta: 07h às 20h40",
       category: "Clínicas",
       subcategory: "Clínica Médica Multiespecialidades"
     },
@@ -385,7 +397,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/clinicadaspatas",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 9126-6426",
-      hours: "Seg-Sáb: 09h - 18h | Atendimento mediante agendamento",
+      hours: "Segunda a Sábado: 09h às 18h | Atendimento mediante agendamento",
       category: "Clínicas",
       subcategory: "Clínica Veterinária"
     },
@@ -463,7 +475,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       whatsappUrl: "https://api.whatsapp.com/send/?phone=5561992848393",
       location: "Subsolo - Metrópole Shopping (em frente à World Gym)",
       phone: "(61) 99284-8393",
-      hours: "Todos os dias",
+      hours: "Segunda a Domingo: 08h às 21h",
       category: "Saúde",
       subcategory: "Nutrição Esportiva"
     },
@@ -477,7 +489,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/10pasteis.aguasclaras/",
       location: "Térreo - Metrópole Shopping",
       phone: "(61) 98341-1079",
-      hours: "Segunda a Sábado: 12h30 às 21h30 | Domingo: 17h00 às 21h30",
+      hours: "Terça a Sábado: 12h30 às 21h30 | Domingo: 17h00 às 21h30",
       category: "Gastronomia",
       subcategory: "Pastéis Artesanais"
     },
@@ -501,7 +513,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/chiquinhoaguasclaras_metropole",
       location: "Térreo - Metrópole Shopping",
       phone: "(61) 3382-3297",
-      hours: "Segunda a Domingo: 12h às 22h30",
+      hours: "Segunda a Domingo: 11h30 às 22h30",
       category: "Gastronomia",
       subcategory: "Sorvetes"
     },
@@ -551,7 +563,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/smartclubcompras",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 9418-7624",
-      hours: "Seg-Sex: 09h - 18h | Sáb: 09h - 12h",
+      hours: "Segunda a Sexta: 09h às 18h | Sábado: 09h às 12h",
       category: "Outros",
       subcategory: "Compras e Serviços"
     },
@@ -563,7 +575,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/meuquartoideal/",
       location: "Térreo - Metrópole Shopping",
       phone: null,
-      hours: "Seg-Sex: 10h - 18h | Sáb: 10h - 16h",
+      hours: "Mediante agendamento",
       category: "Decoração & Casa",
       subcategory: "Arquitetura e Personalização"
     },
@@ -575,7 +587,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/zelar.oficial/",
       location: "Térreo - Metrópole Shopping",
       phone: null,
-      hours: "Seg-Sáb: 09h - 21h | Dom: 12h - 18h",
+      hours: "Segunda a Sábado: 09h às 21h | Domingo: 12h às 18h",
       category: "Decoração & Casa",
       subcategory: "Cama, Mesa e Banho"
     },
@@ -587,19 +599,19 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/multiflores.florenza/",
       location: "Térreo - Metrópole Shopping",
       phone: "(61) 98144-5718",
-      hours: "Seg-Sáb: 10h - 20h | Dom: 12h - 18h",
+      hours: "Segunda a Sábado: 10h às 20h | Domingo: 12h às 18h",
       category: "Decoração & Casa",
       subcategory: "Floricultura e Presentes"
     },
     {
       id: 43,
-      name: "Crieta Interiores",
+      name: "Crietá Interiores",
       logo: "/lovable-uploads/8cb1aa7b-f08b-4b92-9643-b603d36162ac.webp",
       storeImage: "/lovable-uploads/f95ca535-7750-4091-97d2-f7778e9cac7c.webp",
       instagramUrl: "https://www.instagram.com/crieta_aguasclaras/",
       location: "Térreo - Metrópole Shopping",
       phone: "(61) 9 8186-7850",
-      hours: "Seg-Sex: 10h - 20h | Sáb: 10h - 18h",
+      hours: "Segunda a Sexta: 10h às 20h | Sábado: 10h às 18h",
       category: "Decoração & Casa",
       subcategory: "Arquitetura e Design de Interiores"
     },
@@ -639,7 +651,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       websiteUrl: "https://www.pointpel.com.br/",
       location: "Térreo - Metrópole Shopping",
       phone: "(61) 99982-6587",
-      hours: "Seg a Sáb: 10h às 20h, Dom: 12h às 18h",
+      hours: "Segunda a Sábado: 10h às 20h, Dom: 12h às 18h",
       category: "Outros",
       subcategory: "Papelaria",
       type: "quiosque"
@@ -656,7 +668,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/unipet.df",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 9907-2350",
-      hours: "Seg-Sex: 09h30 - 18h | Sáb: 09h30 - 14h30",
+      hours: "Segunda a Sexta: 09h30 às 18h | Sábado: 09h30 às 14h30",
       category: "Educação",
       subcategory: "Universidade PetShop"
     },
@@ -669,7 +681,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       websiteUrl: "https://www.cdfsaladeestudo.com.br/",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 9633-4404",
-      hours: "Seg-Dom: 07h - 01h | Inclusive Feriados",
+      hours: "Segunda a Domingo: 07h às 01h | Inclusive Feriados",
       category: "Educação",
       subcategory: "Sala de Estudos"
     },
@@ -681,7 +693,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/fenixaguas/",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 8218-7062",
-      hours: "Seg-Sáb: 12h - 20h",
+      hours: "Segunda a Sábado: 10h às 20h",
       category: "Outros",
       subcategory: "Tabacaria"
     },
@@ -693,7 +705,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/lojaoverpower",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 9118-8919",
-      hours: "Seg-Sex: 10h - 19h | sab: 10h - 17h",
+      hours: "Segunda a Sexta: 10h às 19h | Sábado: 10h às 17h",
       category: "Outros",
       subcategory: "Video Games e Eletrônicos"
     },
@@ -705,7 +717,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/sportinline",
       location: "Piso Superior - Metrópole Shopping (ao lado da administração)",
       phone: "(61) 3578-3038",
-      hours: "Seg-Sáb: 10h - 19h",
+      hours: "Segunda a Sábado: 10h às 19h",
       category: "Esportes",
       subcategory: "Artigos Esportivos"
     },
@@ -728,7 +740,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/triobaguncafesta/",
       location: "Piso Superior - Metrópole Shopping",
       phone: "61 99181-5767",
-      hours: "Seg-Sex: 13h - 19h15 | Sáb: 11h - 17h15",
+      hours: "Segunda a Sexta: 13h às 19h15 | Sábado: 11h às 17h15",
       category: "Outros",
       subcategory: "Recreação Infantil"
     },
@@ -739,10 +751,10 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       logo: "/lovable-uploads/2245159e-c829-49f5-9632-4b6a1870f561.webp",
       storeImage: "/lovable-uploads/e755b51f-de0f-45b0-b554-2e8b082cb178.webp",
       location: "Piso Superior - Metrópole Shopping",
-      hours: "Seg a Sex: 10h às 19h | Sáb: 10h às 16h",
-      phone: "",
+      hours: "Segunda a Sexta: 10h às 19h | Sábado: 10h às 16h",
+      phone: "61982215656",
       instagramUrl: "https://www.instagram.com/allenjoiasoficial/",
-      category: "Moda",
+      category: "Joias & Bijuterias",
       subcategory: "Joalheria"
     },
 
@@ -755,7 +767,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/imoblydf",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 3568-6035",
-      hours: "Seg-Sex: 09h - 12h/13h - 17h",
+      hours: "Segunda a Sexta: 09h às 12h/13h às 17h",
       category: "Imobiliárias",
       subcategory: "Imobiliária"
     },
@@ -767,7 +779,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/imobiliarialucasdf",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 3351-3747",
-      hours: "Seg-Sex: 08h - 18h | Sáb: 08h - 12h",
+      hours: "Segunda a Sexta: 08h às 18h | Sábado: 08h às 12h",
       category: "Imobiliárias",
       subcategory: "Imobiliária"
     },
@@ -779,7 +791,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/divinomoraisimoveis",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 3435-4814",
-      hours: "Seg-Sex: 09h - 17h30 | Sáb: 08h30 - 12h",
+      hours: "Segunda a Sexta: 09h às 19h | Sábado: 08h30 às 12h",
       category: "Imobiliárias",
       subcategory: "Imobiliária"
     },
@@ -817,7 +829,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/coisademadamedf/",
       location: "Térreo - Metrópole Shopping",
       phone: "",
-      hours: "Seg a Sáb: 10h às 19h",
+      hours: "Segunda a Sábado: 10h às 19h",
       category: "Joias & Bijuterias",
       subcategory: "Semijoias e Acessórios"
     },
@@ -829,9 +841,9 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/lojamariadiogo/",
       location: "Térreo - Metrópole Shopping",
       phone: "",
-      hours: "Seg a Sáb: 10h às 19h",
-      category: "Joias & Bijuterias",
-      subcategory: "Acessórios"
+      hours: "Segunda a Sábado: 10h às 19h",
+      category: "Moda",
+      subcategory: "Moda Feminina"
     },
     {
       id: 61,
@@ -840,8 +852,8 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       storeImage: "/lovable-uploads/8c95f6bf-b9ce-4c9a-bdef-777a32409156.webp",
       instagramUrl: "https://www.instagram.com/balangandasbijus/",
       location: "Térreo - Metrópole Shopping",
-      phone: "",
-      hours: "",
+      phone: "(61) 9975-1974",
+      hours: "Segunda à Sábado: 10h às 19h",
       category: "Joias & Bijuterias",
       subcategory: "Bijus, Folheados, Semijoias"
     }
@@ -1028,13 +1040,18 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
               <CardContent className="p-3 sm:p-6 lg:p-8 space-y-3 sm:space-y-4 lg:space-y-6">
                 {/* Header with Logo and Title */}
                 <div className="flex items-start gap-2 sm:gap-3 lg:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden bg-white shadow-lg flex-shrink-0 border border-primary/10">
+                  {/* ✅ CORREÇÃO: Logos em círculo perfeito - clip-path em container e imagem */}
+                  <div 
+                    className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 flex-shrink-0 overflow-hidden"
+                    style={{ borderRadius: '50%' }}
+                  >
                     <ResponsiveImage 
                       src={store.logo} 
                       alt={`Logo ${store.name}`} 
                       aspectRatio="square"
-                      objectFit="contain"
-                      className="w-full h-full bg-white p-0.5 sm:p-1 transition-transform duration-300 group-hover:scale-105"
+                      objectFit="cover"
+                      className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+                      style={{ borderRadius: '50%' }}
                     />
                   </div>
                   <div className="flex-1 min-w-0">

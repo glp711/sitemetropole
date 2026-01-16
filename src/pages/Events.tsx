@@ -65,7 +65,7 @@ const EventsSection = () => {
   // Calendário mensal
   const monthlyCalendar = [
     { month: "Janeiro", events: ["Pequenos Exploradores", "Liquidação Verão"] },
-    { month: "Fevereiro", events: ["Carnaval Kids", "Volta às Aulas"] },
+    { month: "Fevereiro", events: ["Volta às Aulas"] },
     { month: "Março", events: ["Dia da Mulher", "Outono Cultural"] },
     { month: "Abril", events: ["Páscoa no Metrópole", "Feiras Temáticas"] }
   ];
