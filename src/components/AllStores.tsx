@@ -693,7 +693,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/lojaoverpower",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 9118-8919",
-      hours: "Seg-Sáb: 10h - 19h",
+      hours: "Seg-Sex: 10h - 19h | sab: 10h - 17h",
       category: "Outros",
       subcategory: "Video Games e Eletrônicos"
     },
@@ -801,7 +801,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       name: "Miss Moda Biju",
       logo: "/lovable-uploads/ed5b4c80-6e87-4551-bcad-4be74b38dbf6.webp",
       storeImage: "/lovable-uploads/2ceff1cc-3a98-4e48-ba15-db4a86d02c12.webp",
-      instagramUrl: "https://www.instagram.com/missmodabiju/",
+      instagramUrl: "https://www.instagram.com/missmodabiju_/",
       location: "Térreo - Metrópole Shopping",
       phone: "(61) 9 8379-1820",
       hours: "Segunda a Sábado: 10h às 20h",
