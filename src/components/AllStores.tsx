@@ -375,7 +375,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       phone: "(61) 9627-3387",
       hours: "Segunda a Sexta: 08h às 20h",
       category: "Clínicas",
-      subcategory: "Psicopedagogia"
+      subcategory: "Psicopedagogia, Psicologia e ABA"
     },
     {
       id: 27,
