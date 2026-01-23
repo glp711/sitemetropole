@@ -187,7 +187,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
       instagramUrl: "https://www.instagram.com/estudioanaaquino",
       location: "Piso Superior - Metrópole Shopping",
       phone: "(61) 9 9629-5989",
-      hours: "Segunda a Sábado: 10h às 19h",
+      hours: "Segunda a sexta: 09h às 19h | Sábado: 09h às 15h",
       category: "Beleza",
       subcategory: "Estúdio de Sobrancelhas"
     },
@@ -993,7 +993,7 @@ const AllStores = ({ defaultCategory = "Todas" }: AllStoresProps) => {
                 />
                 
                 {/* Category Badge - Menor no mobile */}
-                <div className="absolute top-2 left-2 sm:top-4 sm:left-4">
+                <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
                   <Badge className="bg-white/90 text-primary border-0 font-semibold px-2 py-0.5 text-[10px] sm:text-xs sm:px-3 sm:py-1">
                     {store.category}
                   </Badge>

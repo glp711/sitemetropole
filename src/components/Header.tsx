@@ -32,6 +32,8 @@ const Header = () => {
     { name: "Saúde", href: "/saude" },
     { name: "Clínicas", href: "/clinicas" },
     { name: "Esportes", href: "/esportes" },
+    { name: "Educação", href: "/educacao" },
+    { name: "Gastronomia", href: "/gastronomia" },
     { name: "Decoração & Casa", href: "/decoracao-casa" },
     { name: "Imobiliárias", href: "/imobiliarias" },
     { name: "Joias & Bijuterias", href: "/joias-bijuterias" },

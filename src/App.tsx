@@ -36,6 +36,8 @@ const AppContent = () => {
             <Route path="/saude" element={<Health />} />
             <Route path="/clinicas" element={<Clinics />} />
             <Route path="/esportes" element={<Sports />} />
+            <Route path="/educacao" element={<Education />} />
+            <Route path="/gastronomia" element={<Gastronomy />} />
             <Route path="/decoracao-casa" element={<Decoration />} />
             <Route path="/imobiliarias" element={<RealEstate />} />
             <Route path="/joias-bijuterias" element={<Jewelry />} />
