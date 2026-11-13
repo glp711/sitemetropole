@@ -11,9 +11,9 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 const showcase = categories
   .filter((c) => c.cover && findStore(c.cover))
   .slice(0, 6)
-  .map((c, i) => {
+  .map((c) => {
     const list = storesIn(c.name);
-    return { ...c, cover: findStore(c.cover!)!, list, turn: i * 45 };
+    return { ...c, cover: findStore(c.cover!)!, list };
   });
 
 const count = stores.length;
@@ -35,7 +35,7 @@ const Hero = () => (
         <Link className="link" to="/mapa-contato">Como chegar</Link>
       </div>
     </div>
-    <div className="hero__shape shutter">
+    <div className="hero__shape shutter cut">
       <img src="/img/fachada.webp" alt="Fachada do Metrópole Shopping, com o letreiro verde e as faixas das lojas" width={2000} height={1333} fetchPriority="high" />
     </div>
   </section>
@@ -61,8 +61,7 @@ const Showcase = () => {
           </div>
         </div>
         <div className="showcase__stage" data-reveal style={{ ["--i" as string]: 1 }}>
-          <div className="showcase__disc" style={{ ["--turn" as string]: `${cur.turn}deg` }} />
-          <div className="showcase__photo">
+          <div className="showcase__photo cut">
             {showcase.map((c, i) => (
               <img key={c.slug} src={c.cover.photo} alt={`Fachada da ${c.cover.name}`} data-active={i === active} loading="lazy" width={800} height={800} />
             ))}
