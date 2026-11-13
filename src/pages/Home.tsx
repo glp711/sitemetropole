@@ -50,11 +50,12 @@ const Showcase = () => {
       <div className="showcase">
         <div className="showcase__list" data-reveal>
           <h2 id="showcase-title">O que tem aqui</h2>
+          <p className="showcase__hint">Escolha uma categoria para ver as lojas.</p>
           <div className="showcase__names" role="group" aria-label="Escolha uma categoria">
             {showcase.map((c, i) => (
-              <button key={c.slug} aria-pressed={i === active} onClick={() => setActive(i)} onMouseEnter={() => setActive(i)}>
-                <span className="star-bullet" />
-                {c.name}
+              <button key={c.slug} className="chip" aria-pressed={i === active} onClick={() => setActive(i)}>
+                <span>{c.name}</span>
+                <span className="chip__count">{c.list.length}</span>
               </button>
             ))}
           </div>
@@ -72,7 +73,7 @@ const Showcase = () => {
             <strong>{cur.list.length} {cur.list.length === 1 ? "lugar" : "lugares"}.</strong> Na foto, {cur.cover.name}. {names.length ? `Também: ${names.join(", ")}.` : ""}
           </p>
           <p>
-            <Link className="link" to={cur.slug}>Ver {cur.name.toLowerCase()}</Link>
+            <Link className="button showcase__go" to={cur.slug}>Ver {cur.name}</Link>
           </p>
         </div>
       </div>
