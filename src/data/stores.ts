@@ -167,19 +167,6 @@ export const stores: Store[] = [
     "photo": "/lovable-uploads/lebebi.webp"
   },
   {
-    "id": 71,
-    "name": "Closet Versi.me",
-    "category": "Moda",
-    "type": "Moda Feminina",
-    "floor": "Piso Superior",
-    "hours": "Segunda a sexta: 10h às 19h | Sábado: 10h às 18h",
-    "phone": "(61) 99925-1735",
-    "whatsapp": "https://wa.me/5561999251735",
-    "instagram": "https://www.instagram.com/closetversime/",
-    "logo": "/lovable-uploads/logoversime.webp",
-    "photo": "/lovable-uploads/versime.webp"
-  },
-  {
     "id": 13,
     "name": "Estúdio Ana Aquino",
     "category": "Beleza",
@@ -282,19 +269,6 @@ export const stores: Store[] = [
     "instagram": "https://www.instagram.com/luxinstituto",
     "logo": "/lovable-uploads/d0b53605-1767-4f9e-9728-f400dcf5a5ff.webp",
     "photo": "/lovable-uploads/bcae1e1f-a1f2-42d3-a319-0866f75d356f.webp"
-  },
-  {
-    "id": 64,
-    "name": "Essências Árabe Perfumes",
-    "category": "Moda",
-    "type": "Perfumaria",
-    "floor": "Térreo",
-    "hours": "Segunda a Sábado: 10h às 20h",
-    "phone": "(61) 99380-6999",
-    "whatsapp": "https://api.whatsapp.com/send/?phone=5561993806999&text&type=phone_number&app_absent=0",
-    "instagram": "https://www.instagram.com/essenciasarabeperfumes/",
-    "logo": "/lovable-uploads/arabelogo.webp",
-    "photo": "/lovable-uploads/arabe.webp"
   },
   {
     "id": 68,
@@ -847,30 +821,6 @@ export const stores: Store[] = [
     "instagram": "https://www.instagram.com/arainha_acessorios",
     "logo": "/lovable-uploads/52ff2b06-dabe-4635-b088-c8aa59962185.webp",
     "photo": "/lovable-uploads/9bb53ccc-19b7-4c3d-a78d-250c177b7a72.webp"
-  },
-  {
-    "id": 59,
-    "name": "Coisa de Madame",
-    "category": "Joias & Bijuterias",
-    "type": "Semijoias e Acessórios",
-    "floor": "Térreo",
-    "hours": "Segunda a Sábado: 10h às 19h",
-    "phone": "",
-    "instagram": "https://www.instagram.com/coisademadamedf/",
-    "logo": "/lovable-uploads/b612e377-cf25-4103-93da-f7b1c651e052.webp",
-    "photo": "/lovable-uploads/eda9cbb7-d779-4cf4-bd90-f22545d0dbf7.webp"
-  },
-  {
-    "id": 60,
-    "name": "Maria Diogo",
-    "category": "Moda",
-    "type": "Moda Feminina",
-    "floor": "Térreo",
-    "hours": "Segunda a Sábado: 10h às 19h",
-    "phone": "",
-    "instagram": "https://www.instagram.com/lojamariadiogo/",
-    "logo": "/lovable-uploads/924d9b5e-18b9-4d77-a812-60c748d58060.webp",
-    "photo": "/lovable-uploads/9ce6b52a-484b-473e-8f1c-b6d2f284e081.webp"
   },
   {
     "id": 61,
