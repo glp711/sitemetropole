@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { site } from "@/data/site";
+import OpenStatus from "./OpenStatus";
+import { categories, site } from "@/data/site";
+import { stores } from "@/data/stores";
 
 const nav = [
-  { name: "Lojas", href: "/lojas" },
-  { name: "Eventos", href: "/eventos" },
-  { name: "Comodidades", href: "/comodidades" },
-  { name: "Como chegar", href: "/mapa-contato" },
+  { name: "Lojas", href: "/lojas", hint: `${stores.length} lojas em três pisos` },
+  { name: "Eventos", href: "/eventos", hint: "Festa junina, férias e mais" },
+  { name: "Comodidades", href: "/comodidades", hint: "Estacionamento, pet, fraldário" },
+  { name: "Como chegar", href: "/mapa-contato", hint: site.street },
 ];
 
 const Header = () => {
@@ -21,6 +23,8 @@ const Header = () => {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
+
+  const tab = open ? 0 : -1;
 
   return (
     <header className="site-header">
@@ -39,33 +43,60 @@ const Header = () => {
           Falar no WhatsApp
         </a>
         <button className="menu-toggle" aria-expanded={open} aria-controls="menu" onClick={() => setOpen(true)}>
+          <span className="menu-toggle__bars" aria-hidden="true" />
           Menu
         </button>
       </div>
 
-      <div id="menu" className="mobile-menu on-field" data-open={open} aria-hidden={!open}>
+      <div id="menu" className="mobile-menu" data-open={open} aria-hidden={!open} role="dialog" aria-modal="true" aria-label="Menu">
         <div className="mobile-menu__top">
-          <Link to="/" aria-label="Página inicial" tabIndex={open ? 0 : -1}>
-            Metrópole Shopping
+          <Link to="/" aria-label="Metrópole Shopping, página inicial" tabIndex={tab} className="site-header__logo">
+            <img src="/img/logo.png" alt="" width={200} height={240} />
           </Link>
-          <button className="menu-toggle" onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}>
+          <button className="menu-close" onClick={() => setOpen(false)} tabIndex={tab}>
             Fechar
+            <span className="menu-close__x" aria-hidden="true" />
           </button>
         </div>
-        <nav className="mobile-menu__links" aria-label="Menu">
-          <Link to="/" tabIndex={open ? 0 : -1}>Início</Link>
-          {nav.map((item) => (
-            <Link key={item.href} to={item.href} tabIndex={open ? 0 : -1}>
-              {item.name}
-            </Link>
+
+        <OpenStatus className="mobile-menu__status" />
+
+        <nav className="mobile-menu__links" aria-label="Menu principal">
+          {[{ name: "Início", href: "/", hint: "Página inicial" }, ...nav].map((item, i) => (
+            <NavLink key={item.href} to={item.href} end tabIndex={tab} style={{ ["--i" as string]: i }}>
+              <span className="mobile-menu__name">
+                <span className="star-bullet" />
+                {item.name}
+              </span>
+              <span className="mobile-menu__hint">{item.hint}</span>
+            </NavLink>
           ))}
         </nav>
-        <div className="mobile-menu__meta">
-          <p>{site.street}, {site.district}</p>
-          <a href={site.phoneHref} tabIndex={open ? 0 : -1}>{site.phone}</a>
-          <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1}>WhatsApp</a>
-          <a href={site.instagram} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1}>Instagram {site.instagramHandle}</a>
+
+        <div className="mobile-menu__cats">
+          <p className="mobile-menu__label">Categorias</p>
+          <ul>
+            {categories.map((c) => (
+              <li key={c.slug}>
+                <Link to={c.slug} tabIndex={tab}>{c.name}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
+
+        <div className="mobile-menu__actions">
+          <a className="button" href={site.whatsappHref} target="_blank" rel="noopener noreferrer" tabIndex={tab}>
+            Falar no WhatsApp
+          </a>
+          <a className="button button--quiet" href={site.phoneHref} tabIndex={tab}>
+            Ligar
+          </a>
+        </div>
+        <p className="mobile-menu__foot">
+          <a className="link" href={site.instagram} target="_blank" rel="noopener noreferrer" tabIndex={tab}>
+            Instagram {site.instagramHandle}
+          </a>
+        </p>
       </div>
     </header>
   );
