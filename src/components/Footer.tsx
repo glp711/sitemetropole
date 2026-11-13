@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
-import Star from "@/components/Star";
 import { categories, openingHours, site } from "@/data/site";
 
 const Footer = () => (
   <footer className="site-footer on-field">
     <div className="wrap">
-      <div className="site-footer__mark">
-        <Star fill="var(--brand)" withCore coreFill="var(--gold)" />
-        <p className="site-footer__word" aria-hidden="true">
-          Metrópole
+      <figure className="site-footer__photo">
+        <img className="cut" src="/img/fachada-lojas.webp" alt="Fachada do Metrópole Shopping na Av. das Araucárias, com as faixas das lojas" loading="lazy" width={1800} height={1199} />
+      </figure>
+
+      <div className="site-footer__brand">
+        <img src="/img/logo-branco.png" alt="Metrópole Shopping" width={200} height={240} loading="lazy" />
+        <p className="site-footer__line">
+          Compras, comida e serviços na {site.street}, em Águas Claras, desde {site.since}.
         </p>
       </div>
 
@@ -59,7 +62,7 @@ const Footer = () => (
       </div>
 
       <div className="site-footer__base">
-        <p>© {new Date().getFullYear()} Metrópole Shopping. Em Águas Claras desde {site.since}.</p>
+        <p>© {new Date().getFullYear()} Metrópole Shopping.</p>
         <a className="button button--light" href={site.whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </div>

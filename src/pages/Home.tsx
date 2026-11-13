@@ -11,9 +11,9 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 const showcase = categories
   .filter((c) => c.cover && findStore(c.cover))
   .slice(0, 6)
-  .map((c, i) => {
+  .map((c) => {
     const list = storesIn(c.name);
-    return { ...c, cover: findStore(c.cover!)!, list, turn: i * 45 };
+    return { ...c, cover: findStore(c.cover!)!, list };
   });
 
 const count = stores.length;
@@ -35,7 +35,7 @@ const Hero = () => (
         <Link className="link" to="/mapa-contato">Como chegar</Link>
       </div>
     </div>
-    <div className="hero__shape shutter">
+    <div className="hero__shape shutter cut">
       <img src="/img/fachada.webp" alt="Fachada do Metrópole Shopping, com o letreiro verde e as faixas das lojas" width={2000} height={1333} fetchPriority="high" />
     </div>
   </section>
@@ -50,18 +50,18 @@ const Showcase = () => {
       <div className="showcase">
         <div className="showcase__list" data-reveal>
           <h2 id="showcase-title">O que tem aqui</h2>
+          <p className="showcase__hint">Escolha uma categoria para ver as lojas.</p>
           <div className="showcase__names" role="group" aria-label="Escolha uma categoria">
             {showcase.map((c, i) => (
-              <button key={c.slug} aria-pressed={i === active} onClick={() => setActive(i)} onMouseEnter={() => setActive(i)}>
-                <span className="star-bullet" />
-                {c.name}
+              <button key={c.slug} className="chip" aria-pressed={i === active} onClick={() => setActive(i)}>
+                <span>{c.name}</span>
+                <span className="chip__count">{c.list.length}</span>
               </button>
             ))}
           </div>
         </div>
         <div className="showcase__stage" data-reveal style={{ ["--i" as string]: 1 }}>
-          <div className="showcase__disc" style={{ ["--turn" as string]: `${cur.turn}deg` }} />
-          <div className="showcase__photo">
+          <div className="showcase__photo cut">
             {showcase.map((c, i) => (
               <img key={c.slug} src={c.cover.photo} alt={`Fachada da ${c.cover.name}`} data-active={i === active} loading="lazy" width={800} height={800} />
             ))}
@@ -72,7 +72,7 @@ const Showcase = () => {
             <strong>{cur.list.length} {cur.list.length === 1 ? "lugar" : "lugares"}.</strong> Na foto, {cur.cover.name}. {names.length ? `Também: ${names.join(", ")}.` : ""}
           </p>
           <p>
-            <Link className="link" to={cur.slug}>Ver {cur.name.toLowerCase()}</Link>
+            <Link className="button showcase__go" to={cur.slug}>Ver {cur.name}</Link>
           </p>
         </div>
       </div>
