@@ -531,7 +531,7 @@ export const stores: Store[] = [
     "tel": "tel:+556130536551",
     "instagram": "https://www.instagram.com/restaurantecareca.aguasclaras/",
     "logo": "/lovable-uploads/979a9e7b-d20f-488b-8a20-adf13cc92f80.webp",
-    "photo": "/lovable-uploads/f6ac6d0a-5709-461f-88ca-18136127f073.webp"
+    "photo": "/img/lojas/careca.webp"
   },
   {
     "id": 38,
