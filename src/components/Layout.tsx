@@ -1,26 +1,19 @@
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import { useScrollToTop } from '@/hooks/use-scroll-to-top';
-import { MobileMenuProvider } from '@/contexts/MobileMenuContext';
+import type { ReactNode } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { useReveal } from "@/hooks/use-reveal";
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   useScrollToTop();
-
+  useReveal();
   return (
-    <MobileMenuProvider>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1 pt-20">
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </MobileMenuProvider>
+    <>
+      <a href="#conteudo" className="sr-only">Pular para o conteúdo</a>
+      <Header />
+      <main id="conteudo">{children}</main>
+      <Footer />
+    </>
   );
 };
 
