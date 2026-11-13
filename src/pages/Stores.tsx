@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import StoreRow from "@/components/StoreRow";
 import { categories, site } from "@/data/site";
 import { stores, type Floor } from "@/data/stores";
@@ -38,6 +38,7 @@ const MoreCategories = ({ current }: { current: string }) => {
 const Stores = ({ category }: { category?: string }) => {
   const [query, setQuery] = useState("");
   const [floor, setFloor] = useState<Floor | "Todos">("Todos");
+  const navigate = useNavigate();
 
   const inCategory = category ? stores.filter((s) => s.category === category) : stores;
   usePageMeta(
@@ -67,32 +68,49 @@ const Stores = ({ category }: { category?: string }) => {
         <h1 data-rise>{category ?? "Lojas"}</h1>
         <p data-rise style={{ ["--i" as string]: 1 }}>
           {category
-            ? `${titleCount} ${titleCount === 1 ? "lugar" : "lugares"} no Metrópole. Toque no nome para falar com a loja.`
-            : `${titleCount} lojas no térreo, no piso superior e no subsolo. Cada uma com seu horário e contato.`}
+            ? `${titleCount} ${titleCount === 1 ? "lugar" : "lugares"} no Metrópole, com piso, horário e contato de cada um.`
+            : `${titleCount} lojas no térreo, no piso superior e no subsolo, com horário e contato de cada uma.`}
         </p>
       </section>
 
       <section className="wrap" aria-label="Filtros">
         <div className="filters" data-rise style={{ ["--i" as string]: 2 }}>
           <label className="filters__search">
-            <span className="sr-only">Buscar loja</span>
-            <input className="field" type="search" placeholder="Buscar por nome ou pelo que vende" value={query} onChange={(e) => setQuery(e.target.value)} />
+            <span className="filters__label">Buscar</span>
+            <input className="field" type="search" placeholder="Nome ou o que vende" value={query} onChange={(e) => setQuery(e.target.value)} />
           </label>
-          <nav className="filters__row" aria-label="Categorias">
-            <Link to="/lojas" aria-current={!category ? "page" : undefined}>Todas</Link>
-            {categories.map((c) => (
-              <Link key={c.slug} to={c.slug} aria-current={category === c.name ? "page" : undefined}>{c.name}</Link>
-            ))}
-          </nav>
-          <div className="filters__row" role="group" aria-label="Piso">
-            {floors.map((f) => (
-              <button key={f} aria-pressed={floor === f} onClick={() => setFloor(f)}>
-                {f === "Todos" ? "Todos os pisos" : f}
-              </button>
-            ))}
+          <div className="filters__group">
+            <span className="filters__label" id="f-cat">Categoria</span>
+            <select
+              className="field filters__select"
+              aria-labelledby="f-cat"
+              value={category ? categories.find((c) => c.name === category)?.slug : "/lojas"}
+              onChange={(e) => navigate(e.target.value)}
+            >
+              <option value="/lojas">Todas as categorias</option>
+              {categories.map((c) => (
+                <option key={c.slug} value={c.slug}>{c.name}</option>
+              ))}
+            </select>
+            <nav className="filters__chips filters__chips--cats" aria-labelledby="f-cat">
+              <Link className="chip chip--sm" to="/lojas" aria-current={!category ? "page" : undefined}>Todas</Link>
+              {categories.map((c) => (
+                <Link key={c.slug} className="chip chip--sm" to={c.slug} aria-current={category === c.name ? "page" : undefined}>{c.name}</Link>
+              ))}
+            </nav>
           </div>
-          <p className="count" aria-live="polite">
-            {total === titleCount ? `Mostrando ${total} ${total === 1 ? "lugar" : "lugares"}` : `${total} de ${titleCount} ${titleCount === 1 ? "lugar" : "lugares"}`}
+          <div className="filters__group">
+            <span className="filters__label" id="f-floor">Piso</span>
+            <div className="filters__chips" role="group" aria-labelledby="f-floor">
+              {floors.map((f) => (
+                <button key={f} className="chip chip--sm" aria-pressed={floor === f} onClick={() => setFloor(f)}>
+                  {f === "Todos" ? "Todos" : f}
+                </button>
+              ))}
+            </div>
+          </div>
+          <p className="filters__count" aria-live="polite">
+            {total === titleCount ? `${total} ${total === 1 ? "lugar" : "lugares"}` : `${total} de ${titleCount} ${titleCount === 1 ? "lugar" : "lugares"}`}
           </p>
         </div>
       </section>
@@ -110,10 +128,13 @@ const Stores = ({ category }: { category?: string }) => {
           return (
             <div key={g.name} className={`dir-group dir-group--aside${category ? " dir-group--single" : ""}`}>
               <div className="dir-group__aside">
-                <div className="dir-group__head" data-reveal>
-                  <h2>{g.name}</h2>
-                  <span className="count">{g.list.length} {g.list.length === 1 ? "lugar" : "lugares"}</span>
-                </div>
+                {category && <h2 className="sr-only">{g.name}</h2>}
+                {!category && (
+                  <div className="dir-group__head" data-reveal>
+                    <h2>{g.name}</h2>
+                    <span className="count">{g.list.length} {g.list.length === 1 ? "lugar" : "lugares"}</span>
+                  </div>
+                )}
                 {cover && (
                   <figure data-reveal style={{ ["--i" as string]: 1 }}>
                     <img className="dir-group__photo cut" src={cover.photo} alt={`Fachada da ${cover.name}`} loading="lazy" width={800} height={1000} />
